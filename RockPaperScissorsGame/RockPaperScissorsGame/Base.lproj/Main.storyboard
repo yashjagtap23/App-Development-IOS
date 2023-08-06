@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="80z-eb-N35">
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RockPaperScissorsGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yA2-V0-Eq5">
+                                <rect key="frame" x="0.0" y="70" width="768" height="954"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="B9R-4O-5ka">
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="318"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rock" translatesAutoresizingMaskIntoConstraints="NO" id="4wU-As-jqY">
+                                                <rect key="frame" x="0.0" y="0.0" width="256" height="318"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="V0d-BZ-VcN">
+                                                <rect key="frame" x="256" y="0.0" width="256" height="318"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scissors" translatesAutoresizingMaskIntoConstraints="NO" id="VXM-ku-8hJ">
+                                                <rect key="frame" x="512" y="0.0" width="256" height="318"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbk-19-Yks">
+                                        <rect key="frame" x="0.0" y="318" width="768" height="318"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Rules"/>
+                                        <connections>
+                                            <action selector="openInSafari:" destination="BYZ-38-t0r" eventType="touchUpInside" id="osb-YX-aYH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSf-jp-DkW">
+                                        <rect key="frame" x="0.0" y="636" width="768" height="318"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Play"/>
+                                        <connections>
+                                            <segue destination="GHA-68-nTv" kind="show" id="Ytp-jD-Apo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yA2-V0-Eq5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="YgX-14-3OH"/>
+                            <constraint firstItem="yA2-V0-Eq5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jfd-hA-xgu"/>
+                            <constraint firstItem="yA2-V0-Eq5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sWO-Wv-zkf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yA2-V0-Eq5" secondAttribute="trailing" id="zNh-gR-D53"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="aJV-lE-CDc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="917.96875" y="83.203125"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="JKa-kR-tWT">
+            <objects>
+                <viewController id="GHA-68-nTv" customClass="SecondViewController" customModule="RockPaperScissorsGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BAW-BV-kBX">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="nSa-Rf-79i">
+                                <rect key="frame" x="20" y="366" width="728" height="293"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rock" translatesAutoresizingMaskIntoConstraints="NO" id="3XZ-RB-IZn">
+                                        <rect key="frame" x="0.0" y="0.0" width="216" height="293"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="m0c-Dw-b0R">
+                                        <rect key="frame" x="256" y="0.0" width="216" height="293"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scissors" translatesAutoresizingMaskIntoConstraints="NO" id="f3i-R9-NFW">
+                                        <rect key="frame" x="512" y="0.0" width="216" height="293"/>
+                                    </imageView>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="IQE-m6-hqv" appends="YES" id="DUl-Ki-uKo"/>
+                                </connections>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Z3U-N1-4OQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Z3U-N1-4OQ" firstAttribute="trailing" secondItem="nSa-Rf-79i" secondAttribute="trailing" constant="20" id="6mc-2c-w74"/>
+                            <constraint firstItem="nSa-Rf-79i" firstAttribute="leading" secondItem="Z3U-N1-4OQ" secondAttribute="leading" constant="20" id="EdL-YC-UHn"/>
+                            <constraint firstItem="nSa-Rf-79i" firstAttribute="top" secondItem="Z3U-N1-4OQ" secondAttribute="top" constant="296" id="RXe-3s-7zR"/>
+                            <constraint firstItem="Z3U-N1-4OQ" firstAttribute="bottom" secondItem="nSa-Rf-79i" secondAttribute="bottom" constant="365" id="WAG-H1-aSM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="k8T-qL-ek4"/>
+                    <connections>
+                        <outlet property="stackView" destination="nSa-Rf-79i" id="TlT-dL-nTD"/>
+                        <outletCollection property="images" destination="f3i-R9-NFW" collectionClass="NSMutableArray" id="PfL-i8-zD7"/>
+                        <outletCollection property="images" destination="m0c-Dw-b0R" collectionClass="NSMutableArray" id="ybO-Nr-FgE"/>
+                        <outletCollection property="images" destination="3XZ-RB-IZn" collectionClass="NSMutableArray" id="7UZ-pq-AEI"/>
+                        <segue destination="glQ-cZ-ifN" kind="show" identifier="segueToNextViewController" id="gBT-R7-fRo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GRC-9L-Uu7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="IQE-m6-hqv">
+                    <connections>
+                        <action selector="whenTapped:" destination="GHA-68-nTv" id="Zyp-te-yqc"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1547.65625" y="84.9609375"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="c8C-eu-lTE">
+            <objects>
+                <viewController id="glQ-cZ-ifN" customClass="ThirdViewController" customModule="RockPaperScissorsGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tIV-Qd-GKg" customClass="Thir">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gte-xB-p16">
+                                <rect key="frame" x="248" y="265" width="272" height="207"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player Choice:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zjk-t0-vnZ">
+                                <rect key="frame" x="20" y="194" width="728" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Computer Choice:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GZ-Ce-51Q">
+                                <rect key="frame" x="20" y="528" width="728" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hrM-79-zPg">
+                                <rect key="frame" x="248" y="599" width="272" height="207"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="k51-5e-npF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wgk-Rp-GMP"/>
+                    <connections>
+                        <outlet property="cpuImage" destination="hrM-79-zPg" id="RxY-JB-EFW"/>
+                        <outlet property="playerImage" destination="Gte-xB-p16" id="5vC-np-dqK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NL1-eJ-Iqi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2375" y="84.9609375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MSF-ZO-gFd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="80z-eb-N35" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="p3m-2j-cQG">
+                        <rect key="frame" x="0.0" y="20" width="768" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="PWW-0M-WGp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YYB-fr-zPa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-388" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="paper" width="3464" height="2309"/>
+        <image name="rock" width="481" height="680"/>
+        <image name="scissors" width="340" height="340"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

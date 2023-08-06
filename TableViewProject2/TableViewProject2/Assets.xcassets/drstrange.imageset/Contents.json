@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "poster-doctor-strange-in-the-multiverse-of-madness-2022-2022-photo-credit-marvel-studios-tha-2J47YMN.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
